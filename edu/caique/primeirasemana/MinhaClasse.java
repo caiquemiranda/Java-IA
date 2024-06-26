@@ -1,3 +1,4 @@
+package edu.caique.primeirasemana;
 
 public class MinhaClasse {
 
