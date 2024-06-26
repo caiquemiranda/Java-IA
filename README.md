@@ -1,2 +1,1 @@
-# Java_IA
-Java_IA
+# Java-IA
