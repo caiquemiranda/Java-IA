@@ -1,9 +1,16 @@
 
-class MinhaClasse {
+public class MinhaClasse {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello World !");
+        String firstName = "Caique";
+        String lastName = "Miranda";
 
+        String completeName = completeName(firstName, lastName);
+        System.out.println(completeName);
+    }
+
+    public static String completeName(String firstName, String lastName) {
+        return firstName.concat(" ").concat(lastName);
     }
 }
