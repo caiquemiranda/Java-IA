@@ -7,8 +7,8 @@ public class SobreMin {
         int age = Integer.valueOf(args[2]);
         double height = Double.valueOf(args[3]);
 
-        System.out.println("ME CHAMO " + firstName + " " + lastName);
+        System.out.println("Me Chamo " + firstName + " " + lastName);
         System.out.println("Tenho " + age + " anos");
-        System.out.println("MINHA ALTURA É: "  + height );
+        System.out.println("Minha Altura é de " + height);
     }
 }
