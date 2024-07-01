@@ -1,4 +1,4 @@
-package edu.caique.segundasemana;
+package edu.semanas.segundasemana;
 
 public class BoletinAcademico{
     public static void main(String[] args) {

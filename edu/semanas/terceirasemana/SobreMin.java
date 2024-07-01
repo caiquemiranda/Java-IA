@@ -1,4 +1,4 @@
-package edu.caique.terceirasemana;
+package edu.semanas.terceirasemana;
 
 public class SobreMin {
     public static void main(String[] args) {
