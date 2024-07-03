@@ -27,7 +27,7 @@ Se o usuário escolher:
 #### Exemplos
 A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
 
-![IOchallengeOne](img/IOChallengeOne.png)
+![IOchallengeOne](Java-IA\JavaChallenges\img\IOchallengeOne.png)
 
 ---
 ### Challenge #2
