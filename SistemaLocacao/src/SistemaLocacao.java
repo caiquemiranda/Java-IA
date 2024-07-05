@@ -1,6 +1,7 @@
 public class SistemaLocacao {
     public static void main(String[] args) {
-        Veiculo veiculo = new Veiculo("ABC1234",
+        Veiculo veiculo = new Veiculo(
+                "ABC1234",
                 "Chevrolet",
                 "Onix",
                 2020,
