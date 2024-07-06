@@ -7,14 +7,14 @@ public class MaterialEscolar {
                 10);
 
         System.out.println(caneta);
-        
+
         caneta.setCor("Preta");
         caneta.setMarca("Compactor");
         caneta.setModelo("Neo Grip");
         caneta.setPreco(3.5);
         caneta.setQuantidade(5);
-        
-        System.out.println(caneta);
 
+        System.out.println(caneta);
+        caneta.status();
     }
 }
