@@ -1,3 +1,4 @@
+
 public class MaterialEscolar {
     public static void main(String[] args) throws Exception {
         CanetaModel caneta = new CanetaModel("Azul",
@@ -6,7 +7,7 @@ public class MaterialEscolar {
                 2.5,
                 10);
 
-        System.out.println(caneta);
+       // System.out.println(caneta);
 
         caneta.setCor("Preta");
         caneta.setMarca("Compactor");
@@ -14,7 +15,15 @@ public class MaterialEscolar {
         caneta.setPreco(3.5);
         caneta.setQuantidade(5);
 
-        System.out.println(caneta);
+        //System.out.println(caneta);
         caneta.status();
+        caneta.status();
+        caneta.status();
+        caneta.status();
+        caneta.status();
+        caneta.status();
+        caneta.status();
+        caneta.status();
+
     }
 }

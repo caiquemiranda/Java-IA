@@ -69,60 +69,59 @@ public class CanetaModel {
     }
 
     public void aberta() {
-        System.out.println("Caneta está aberta.");
+        
+        System.out.println("A Caneta está aberta.");
     }
 
     public void nivelTinta() {
 
-        double nivelTinta = 100;
+        double nivelTinta = 100.0;
+        Random random = new Random();
+        double numero = random.nextDouble();
 
-        while (nivelTinta > 5) {
+        nivelTinta = nivelTinta - numero;
 
-            Random random = new Random();
-            double numero = random.nextDouble();
+        System.out.println("Nivel de Tinta: " + String.format("%.2f", nivelTinta) +" %");
+        System.out.println("Você usou " + String.format("%.2f", numero) + " %");
 
-            nivelTinta = nivelTinta - numero;
+        if (nivelTinta <= 50 && nivelTinta > 25) {
+            System.out.println("Caneta está com um nível de tinta médio.");
 
-            System.out.println(nivelTinta);
-            System.out.println(numero);
+        } else if (nivelTinta <= 25 && nivelTinta >= 5) {
+            System.out.println("Caneta está com um nível de tinta baixo. carrege a caneta");
+            boolean carregar = true;
 
-            if (nivelTinta <= 50 && nivelTinta > 25) {
-                System.out.println("Caneta está com um nível de tinta médio.");
+            while (carregar) {
+                System.out.println("Quer carregar a caneta agora?(s/n)");
+                Scanner scanner = new Scanner(System.in);
+                String resposta = scanner.nextLine();
 
-            } else if (nivelTinta <= 25 && nivelTinta >= 5) {
-                System.out.println("Caneta está com um nível de tinta baixo. carrege a caneta");
-                boolean carregar = true;
+                if (resposta.equalsIgnoreCase("s")) {
+                    nivelTinta = 100;
+                    carregar = false;
+                    System.out.println("Caneta carregada.");
 
-                while (carregar) {
-                    System.out.println("Quer carregar a caneta agora?(s/n)");
-                    Scanner scanner = new Scanner(System.in);
-                    String resposta = scanner.nextLine();
-
-                    if (resposta.equalsIgnoreCase("s")) {
-                        nivelTinta = 100;
-                        carregar = false;
-                        System.out.println("Caneta carregada.");
-
-                    } else if (resposta.equalsIgnoreCase("n")) {
-                        System.out.println("Caneta não carregada.");
-                        carregar = false;
-                        break;
-                    }
+                } else if (resposta.equalsIgnoreCase("n")) {
+                    System.out.println("Caneta não carregada.");
+                    carregar = false;
+                    break;
                 }
-            } else {
-                System.out.println("Caneta está sem Tinta. Não escreve mais.");
+                scanner.close();
             }
-        }
+        } else if (nivelTinta <= 5) {
+            System.out.println("Caneta está sem Tinta. Não escreve mais.");
+        
     }
+}
 
     public void status() {
-        nivelTinta();
         aberta();
+        nivelTinta();
+
     }
 
     public void Escrever() {
         status();
         System.out.println("Escrevendo...");
     }
-
 }

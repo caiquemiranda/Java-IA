@@ -1,3 +1,4 @@
+package test;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -6,7 +7,7 @@ public class NivelTinta {
     public static void main(String[] args) {
         double nivelTinta = 100;
 
-        while (nivelTinta > 5) {
+        while (nivelTinta > 1) {
 
             Random random = new Random();
             int numero = random.nextInt(5);
@@ -37,6 +38,7 @@ public class NivelTinta {
                         carregar = false;
                         break;
                     }
+                    scanner.close();
                 }
             } else if (nivelTinta <= 5) {
                 System.out.println("Caneta está sem Tinta. Não escreve mais.");
@@ -44,4 +46,5 @@ public class NivelTinta {
             }
         }
     }
+
 }
