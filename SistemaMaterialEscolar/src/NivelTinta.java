@@ -9,12 +9,11 @@ public class NivelTinta {
         while (nivelTinta > 5) {
 
             Random random = new Random();
-            double numero = random.nextDouble();
+            int numero = random.nextInt(5);
 
             nivelTinta = nivelTinta - numero;
 
             System.out.println(nivelTinta);
-            System.out.println(numero);
 
             if (nivelTinta <= 50 && nivelTinta > 25) {
                 System.out.println("Caneta está com um nível de tinta médio.");
@@ -39,8 +38,9 @@ public class NivelTinta {
                         break;
                     }
                 }
-            } else {
+            } else if (nivelTinta <= 5) {
                 System.out.println("Caneta está sem Tinta. Não escreve mais.");
+                break;
             }
         }
     }
