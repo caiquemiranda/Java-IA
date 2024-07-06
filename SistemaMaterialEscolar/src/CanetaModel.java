@@ -68,9 +68,29 @@ public class CanetaModel {
                 '}';
     }
 
-    public void aberta() {
-        
-        System.out.println("A Caneta está aberta.");
+    public boolean aberta() {
+        boolean bocal = true;
+        System.out.println("A Caneta está com bocal.");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Quer retirar o bocal? (s/n).");
+        String resposta = scanner.nextLine();
+
+        while (bocal) {
+            if (resposta.equalsIgnoreCase("n")) {
+                System.out.println("Voce precisa retirar o bocal para usar a caneta.");
+                break;
+
+            } else if (resposta.equalsIgnoreCase("s")) {
+                bocal = false;
+                System.out.println("A Caneta está aberta.");
+
+            }
+
+        }
+
+        scanner.close();
+        return bocal;
     }
 
     public void nivelTinta() {
@@ -81,7 +101,7 @@ public class CanetaModel {
 
         nivelTinta = nivelTinta - numero;
 
-        System.out.println("Nivel de Tinta: " + String.format("%.2f", nivelTinta) +" %");
+        System.out.println("Nivel de Tinta: " + String.format("%.2f", nivelTinta) + " %");
         System.out.println("Você usou " + String.format("%.2f", numero) + " %");
 
         if (nivelTinta <= 50 && nivelTinta > 25) {
@@ -110,14 +130,15 @@ public class CanetaModel {
             }
         } else if (nivelTinta <= 5) {
             System.out.println("Caneta está sem Tinta. Não escreve mais.");
-        
+
+        }
     }
-}
 
     public void status() {
-        aberta();
-        nivelTinta();
-
+        if (!aberta()){
+            nivelTinta();
+        };
+  
     }
 
     public void Escrever() {

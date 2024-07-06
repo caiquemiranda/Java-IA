@@ -17,13 +17,6 @@ public class MaterialEscolar {
 
         //System.out.println(caneta);
         caneta.status();
-        caneta.status();
-        caneta.status();
-        caneta.status();
-        caneta.status();
-        caneta.status();
-        caneta.status();
-        caneta.status();
 
     }
 }
